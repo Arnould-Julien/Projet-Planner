@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./assets/js/script.js"> </script>
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+    <title>Project planner</title>
+</head>
+<body>
+    <header class="header"> 
+        <!-- Logo,titre, bouton filtre-->
+        <a href="#"> <img id="header__logo" src="./assets/img/logo-planificateurdetâche.png"></a>
+        <h1>Project planner</h1>
+        <button class="btn__filter" type="button">Filter</button>
+
+        <section>
+            <fieldset>
+                <legend>Select a filter method:</legend>
+                <div>
+                    <input type="radio" id="radio-default" name="check" value="radio-default"
+                           checked>
+                    <label for="radio-default">Default</label>
+                  </div>
+            
+                <div>
+                  <input type="radio" id="radio-to-do" name="check" value="radio-to-do"
+                         checked>
+                  <label for="radio-to-do">To do</label>
+                </div>
+            
+                <div>
+                  <input type="radio" id="radio-doing" name="check" value="radio-doing">
+                  <label for="radio-doing">Doing</label>
+                </div>
+            
+                <div>
+                  <input type="radio" id="radio-done" name="check" value="radio-done">
+                  <label for="radio-done">Done</label>
+                </div>
+            </fieldset>
+            
+        </section>
+    </header>
+
+    <main>
+
+        <article id="article to-do" class="article__section section--header">
+            <section class="to-do__header"><!-- titre,h2, menu déroulant-->
+                <h2>To Do</h2>
+                <label for="filter-select-to-do">Choose your filter : </label>
+                <select name="filter" id="filter-select-to-do" class="filter-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="nodeadline">No deadline</option>
+                    <option value="to do">To do</option>
+                    <option value="late">Late</option>
+                </select>
+            </section>
+            <section id="to-do__content" class="article__section section--content"><!-- JS injection --></section>
+            <section id="to-do__footer" class="article__section section--footer">
+                <!-- Add a task system -->
+                <button id="to-do__button" type="button" class="btn--add-task">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>                  
+                    Add a task
+                </button>
+            </section>
+        </article>
+
+        <article class="article doing"> 
+            <section id="doing__header" class="article__section section--header">
+                <!-- titre, menu déroulant-->
+                <h2>Doing</h2>
+                <label for="filter-select-doing">Choose your filter : </label>
+                <select name="filter" id="filter-select-doing" class="filter-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="nodeadline">No deadline</option>
+                    <option value="to do">To do</option>
+                    <option value="late">Late</option>
+                </select>
+            </section>
+            <section id="doing__content" class="article__section section--content"><!-- JS injection --></section>
+            <section id="doing__footer" class="article__section section--footer">
+                <!-- Add a task system -->
+                <button id="doing__button"  type="button" class="btn--add-task">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>                  
+                    Add a task
+                </button>
+            </section>
+        </article>
+
+        <article class="article done">
+            <section id="done__header" class="article__section section--header">
+                <!-- titre, menu déroulant-->
+                <h2>Done</h2>
+                <label for="filter-select-done">Choose your filter : </label>
+                <select name="filter" id="filter-select-done" class="filter-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="nodeadline">No deadline</option>
+                    <option value="to do">To do</option>
+                    <option value="late">Late</option>
+                </select>
+            </section>
+            <section id="done__content" class="article__section section--content"><!-- JS injection --></section>
+            <section id="done__footer" class="article__section section--footer">
+                <!-- Add a task system -->
+                <button id="done__button"  type="button" class="btn--add-task">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>                  
+                    Add a task
+                </button>
+            </section>
+        </article>
+
+    </main>
+</body>
+</html>

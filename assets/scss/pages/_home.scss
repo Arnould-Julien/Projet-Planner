@@ -1,0 +1,39 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 150px;
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    .article{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 15px 0;
+        padding: 10px;
+        &__section{
+            width: 100%;
+        }
+        .section--header, .section--footer{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 75px;
+        }
+        .section--content{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    }
+}
