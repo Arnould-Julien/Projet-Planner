@@ -48,8 +48,15 @@ input {
 }
 
 html, body {
-  height: 100%;
   width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
 }
 
 header {
@@ -146,6 +153,7 @@ main article .section--footer {
   align-items: center;
 }
 
+/* ----- Button in header for all filters ----- */
 .btn__filter {
   height: 25px;
   width: 70px;
@@ -165,6 +173,7 @@ input[type=radio]:checked {
   border: 5px solid rgb(219, 219, 219);
 }
 
+/* ----- Buttons of Tasks ----- */
 .btn--add-task {
   height: 35px;
   width: 110px;
@@ -183,6 +192,30 @@ input[type=radio]:checked {
 }
 .btn--add-task p {
   line-height: 31px;
+}
+
+.form--tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form--tasks textarea {
+  width: 100%;
+  min-height: 100px;
+}
+.form--tasks input[type=submit] {
+  cursor: pointer;
+}
+.form--tasks svg {
+  height: 22px;
+  width: 22px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  stroke-width: 2;
 }
 
 #header__logo {
