@@ -2,9 +2,11 @@
 const formSubmit = document.getElementsByClassName("form__submit")
 const cancelButtons = document.getElementsByClassName("cancel")
 
-export function displayForm(button){
+export function displayForm(form, button){
     button.style.display = "none"
-    button.previousSibling.previousSibling.style.display ="flex"
+    console.log(button)
+    console.log(form)
+    // form.style.display ="flex"
 }
 
 function hideForm(cancel){

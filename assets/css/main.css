@@ -174,39 +174,20 @@ input[type=radio]:checked {
 }
 
 /* ----- Buttons of Tasks ----- */
-.btn--add-task {
-  height: 35px;
-  width: 110px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.btn--add-task svg, .btn--add-task p {
-  height: 31px;
-}
-.btn--add-task svg {
-  margin: 0;
-  padding: 0;
-}
-.btn--add-task p {
-  line-height: 31px;
-}
-
 .form--tasks {
   width: 100%;
-  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
 .form--tasks textarea {
+  display: none;
   width: 100%;
   min-height: 100px;
 }
 .form--tasks input[type=submit] {
+  display: none;
   cursor: pointer;
 }
 .form--tasks svg {
@@ -216,6 +197,24 @@ input[type=radio]:checked {
   padding: 0;
   cursor: pointer;
   stroke-width: 2;
+}
+.form--tasks .btn--add-task {
+  display: block;
+  height: 35px;
+  line-height: 32px;
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form--tasks .btn--add-task svg, .form--tasks .btn--add-task p {
+  height: 31px;
+}
+.form--tasks .btn--add-task svg {
+  margin: 0;
+  padding: 0;
 }
 
 #header__logo {
