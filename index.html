@@ -13,29 +13,27 @@
         <!-- Logo,titre, bouton filtre-->
         <a href="#"> <img id="header__logo" src="./assets/img/logo-planificateurdetâche.png"></a>
         <h1>Project planner</h1>
-        <button class="btn__filter" type="button">Filter</button>
+        <button id="btn_header_filters" class="btn__filter" type="button">Filter</button>
 
-        <section>
+        <section id="header_filters">
             <fieldset>
                 <legend>Select a filter method:</legend>
-                <div>
-                    <input type="radio" id="radio-default" name="check" value="radio-default"
-                           checked>
+                <div class="fieldset__content">
+                    <input type="radio" id="radio-default" name="check" value="radio-default">
                     <label for="radio-default">Default</label>
-                  </div>
+                </div>
             
-                <div>
-                  <input type="radio" id="radio-to-do" name="check" value="radio-to-do"
-                         checked>
+                <div class="fieldset__content">
+                  <input type="radio" id="radio-to-do" name="check" value="radio-to-do">
                   <label for="radio-to-do">To do</label>
                 </div>
             
-                <div>
+                <div class="fieldset__content">
                   <input type="radio" id="radio-doing" name="check" value="radio-doing">
                   <label for="radio-doing">Doing</label>
                 </div>
             
-                <div>
+                <div class="fieldset__content">
                   <input type="radio" id="radio-done" name="check" value="radio-done">
                   <label for="radio-done">Done</label>
                 </div>
@@ -46,9 +44,10 @@
 
     <main>
 
-        <article id="article to-do" class="article__section section--header">
-            <section class="to-do__header"><!-- titre,h2, menu déroulant-->
-                <h2>To Do</h2>
+        <article id="article__to-do" class="article__section section--header">
+            <section id="to-do__header" class="article__section section--header">
+                <!-- titre,h2, menu déroulant-->
+                <h2 class="task-title">To Do</h2>
                 <label for="filter-select-to-do">Choose your filter : </label>
                 <select name="filter" id="filter-select-to-do" class="filter-select">
                     <option value="">--Please choose an option--</option>
@@ -61,18 +60,18 @@
             <section id="to-do__footer" class="article__section section--footer">
                 <!-- Add a task system -->
                 <button id="to-do__button" type="button" class="btn--add-task">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                     </svg>                  
-                    Add a task
+                    <p>Add a task</p>
                 </button>
             </section>
         </article>
 
-        <article class="article doing"> 
+        <article id="article__doing" class="article__section section--header">
             <section id="doing__header" class="article__section section--header">
                 <!-- titre, menu déroulant-->
-                <h2>Doing</h2>
+                <h2 class="task-title">Doing</h2>
                 <label for="filter-select-doing">Choose your filter : </label>
                 <select name="filter" id="filter-select-doing" class="filter-select">
                     <option value="">--Please choose an option--</option>
@@ -85,18 +84,18 @@
             <section id="doing__footer" class="article__section section--footer">
                 <!-- Add a task system -->
                 <button id="doing__button"  type="button" class="btn--add-task">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                     </svg>                  
-                    Add a task
+                    <p>Add a task</p>
                 </button>
             </section>
         </article>
 
-        <article class="article done">
+        <article id="article__done" class="article__section section--header">
             <section id="done__header" class="article__section section--header">
                 <!-- titre, menu déroulant-->
-                <h2>Done</h2>
+                <h2 class="task-title">Done</h2>
                 <label for="filter-select-done">Choose your filter : </label>
                 <select name="filter" id="filter-select-done" class="filter-select">
                     <option value="">--Please choose an option--</option>
@@ -109,10 +108,10 @@
             <section id="done__footer" class="article__section section--footer">
                 <!-- Add a task system -->
                 <button id="done__button"  type="button" class="btn--add-task">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                     </svg>                  
-                    Add a task
+                    <p>Add a task</p>
                 </button>
             </section>
         </article>

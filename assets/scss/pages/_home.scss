@@ -4,10 +4,55 @@ html,body{
 }
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: nowrap;
-    height: 150px;
+    height: 250px;
     width: 100%;
+    overflow: hidden;
+    #header__logo{
+        margin-top: 15px;
+        height: 80px;
+    }
+    h1{
+        font-size: 4vh;
+        margin: 15px 0;
+    }
+    .btn__filter{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 100;
+    }
+    .btn__filter--invert{
+        color: black;
+        background-color: white;
+    }
+    #header_filters{
+        width: 250px;
+        background-color: rgba(26, 26, 26, 0.9);
+        padding: 75px 15px 15px 15px;
+        height: 250px;
+        color: white;
+        position: absolute;
+        right: -100%;
+        z-index: 50;
+        transition: all 1s;
+    }
+    .display-header-filters{
+        right: 0 !important;
+    }
+    fieldset{
+        border: 1px solid white;
+        padding: 30px 10px;
+        legend{
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+    .fieldset__content{
+        height: 22px;
+    }
 }
 main{
     display: flex;
@@ -15,25 +60,40 @@ main{
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    .article{
+    background-color: #333;
+    color: white;
+    article{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 100%;
-        margin: 15px 0;
+        background-color: rgb(90, 90, 90);
+        overflow: hidden;
+        margin: 15px;
         padding: 10px;
-        &__section{
+        .article__section{
             width: 100%;
-        }
-        .section--header, .section--footer{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            height: 75px;
-        }
-        .section--content{
             display: flex;
             flex-direction: column;
-            height: auto;
+            flex-wrap: nowrap;
+        }
+        .section--header{
+            // flex-direction: row;
+            .task-title{
+                text-align: center;
+                font-size: 24px;
+                width: 100%;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .filter-select{
+                width: 200px;
+            }
+        }
+        .section--footer{
+            justify-content: center;
+            align-items: center;
         }
     }
 }
