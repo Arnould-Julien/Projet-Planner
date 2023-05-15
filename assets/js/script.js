@@ -1,6 +1,7 @@
 import { toggleHeaderFilter } from "./modules/toggleHeaderFilters.js";
 import { displayForm } from "./modules/toggleDisplayFormAndButtons.js";
 import { addTask } from "./modules/addTask.js";
+import { showTasks } from "./modules/showTasks.js";
 
 export const btnHeaderFilters = document.getElementById("btn_header_filters")
 const buttonsAddingTask = document.getElementsByClassName("btn--add-task")
@@ -29,3 +30,5 @@ for(let submit of submitButtons){
         addTask(form, titleTask)
     })
 }
+
+showTasks()
