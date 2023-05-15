@@ -16,5 +16,5 @@ Vous pouvez ajouter une nouvelle tâche en cliquant sur le bouton "Ajouter une t
 Les tâches sont enregistrées automatiquement dans le stockage local, ce qui signifie qu'elles seront conservées même si vous fermez l'application ou redémarrez votre ordinateur. Pour effacer toutes les tâches enregistrées, cliquez sur le bouton "Effacer toutes les tâches".
 
 Auteurs
-Ce projet a été créé par Steve Grad Steve & Arnould Julien.
+Ce projet a été créé par Steve Grad & Arnould Julien.
 
