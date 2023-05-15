@@ -1,34 +1,22 @@
-let tasksArray = []
-let taskObject = {}
-
+export let tasksArray = JSON.parse(localStorage.getItem("tasks")) || []
 
 export function addTask(){
     const form = event.target.parentNode
     for(let input of form){
         if(input.nodeName.toLowerCase() == "textarea"){
-            const titleTask = input.value
-            
-             taskObject = {
-    title: titleTask,
-    status: false,
-    description: "",
-    createDate: "",
-    deadline:"",
-}
+            addObjectToArray(input.value)
         }   
-         
     }
-
-
-tasksArray.push(taskObject);
-console.log(tasksArray)
-// function completerObject () {
-let date1 = Date()
-let date2 = Date.now 
-
-document.getElementById
-
 }
 
-console.log(taskObject)
-
+function addObjectToArray(titleTask){
+    let taskObject = {
+        title: titleTask,
+        status: false,
+        description: "",
+        createDate: new Date(),
+        deadline: null,
+    }
+    tasksArray.push(taskObject);
+    localStorage.setItem("tasks", JSON.stringify(tasksArray))
+}
