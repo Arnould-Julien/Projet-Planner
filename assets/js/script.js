@@ -11,7 +11,12 @@ btnHeaderFilters.addEventListener("click",toggleHeaderFilter)
 
 for(let form of taskForms){
     form.addEventListener("click", (event) =>{
-        displayForm(form, event.target)
+        if(event.target.classList.contains("btn--add-task")){
+            displayForm(form, event.target)
+        }        
+        else if(event.target.classList.contains("form__submit")){
+            console.log("ok")
+        }
     })
 }
 
