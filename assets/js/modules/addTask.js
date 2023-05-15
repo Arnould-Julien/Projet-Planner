@@ -13,7 +13,7 @@ export function addTask(){
 
 function addObjectToArray(titleTask, form){
     let taskObject = {
-        id: Date.now(),
+        id: tasksArray.length+1,
         type: form.id, 
         title: titleTask,
         status: false,
